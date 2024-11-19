@@ -1,17 +1,18 @@
-<template>
-  <div class="maximize" @click="exitMaximize">
-    <i :class="'iconfont icon-tuichu'"></i>
-  </div>
-</template>
-
 <script setup lang="ts">
-import { useGlobalStore } from "@/stores/modules/global";
+import {useGlobalStore} from "@/stores/modules/global";
 
 const globalStore = useGlobalStore();
 const exitMaximize = () => {
   globalStore.setGlobalState("maximize", false);
 };
 </script>
+
+<template>
+  <div class="maximize" @click="exitMaximize">
+    <i :class="'iconfont icon-tuichu'"></i>
+  </div>
+</template>
+
 
 <style scoped lang="scss">
 .maximize {
@@ -25,9 +26,11 @@ const exitMaximize = () => {
   background-color: var(--el-color-info);
   border-radius: 50%;
   opacity: 0.9;
+
   &:hover {
     background-color: var(--el-color-info-dark-2);
   }
+
   .iconfont {
     position: relative;
     top: 46%;

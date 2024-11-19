@@ -9,11 +9,11 @@
         </div>
         <el-scrollbar>
           <el-menu
-            :router="false"
-            :default-active="activeMenu"
-            :collapse="isCollapse"
-            :unique-opened="accordion"
-            :collapse-transition="false"
+              :router="false"
+              :default-active="activeMenu"
+              :collapse="isCollapse"
+              :unique-opened="accordion"
+              :collapse-transition="false"
           >
             <SubMenu :menu-list="menuList" />
           </el-menu>
@@ -35,7 +35,7 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useAuthStore } from "@/stores/modules/auth";
 import { useGlobalStore } from "@/stores/modules/global";
-import Main from "@/layouts/components/Main/index.vue";
+import Main from "@/layouts/Main.vue";
 import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
@@ -52,5 +52,52 @@ const activeMenu = computed(() => (route.meta.activeMenu ? route.meta.activeMenu
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+.el-container {
+  width: 100%;
+  height: 100%;
+  :deep(.el-aside) {
+    width: auto;
+    background-color: var(--el-menu-bg-color);
+    border-right: 1px solid var(--el-aside-border-color);
+    .aside-box {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: width 0.3s ease;
+      .el-scrollbar {
+        height: calc(100% - 55px);
+        .el-menu {
+          width: 100%;
+          overflow-x: hidden;
+          border-right: none;
+        }
+      }
+      .logo {
+        box-sizing: border-box;
+        height: 55px;
+        .logo-img {
+          width: 28px;
+          object-fit: contain;
+        }
+        .logo-text {
+          margin-left: 6px;
+          font-size: 21.5px;
+          font-weight: bold;
+          color: var(--el-aside-logo-text-color);
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .el-header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    padding: 0 15px;
+    background-color: var(--el-header-bg-color);
+    border-bottom: 1px solid var(--el-header-border-color);
+  }
+}
 </style>

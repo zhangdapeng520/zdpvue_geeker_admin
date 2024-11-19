@@ -1,3 +1,12 @@
+<template>
+  <div class="footer flx-center">
+    <a href="https://github.com/zhangdapeng520" target="_blank">
+      2024 © 张大鹏
+    </a>
+  </div>
+</template>
+
+<style scoped lang="scss">
 .footer {
   height: 30px;
   background-color: var(--el-bg-color);
@@ -9,3 +18,4 @@
     letter-spacing: 0.5px;
   }
 }
+</style>

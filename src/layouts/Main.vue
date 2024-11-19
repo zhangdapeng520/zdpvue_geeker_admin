@@ -5,7 +5,7 @@ import {useDebounceFn} from "@vueuse/core";
 import {useGlobalStore} from "@/stores/modules/global";
 import {useKeepAliveStore} from "@/stores/modules/keepAlive";
 import Maximize from "@/layouts/Maximize.vue";
-import Tabs from "@/layouts/components/Tabs/index.vue";
+import Tabs from "@/layouts/Tabs.vue";
 import Footer from "@/layouts/Footer.vue";
 
 const globalStore = useGlobalStore();

@@ -2,7 +2,7 @@
 import {computed, reactive, watch, type Component} from "vue";
 import {LayoutType} from "@/stores/interface";
 import {useGlobalStore} from "@/stores/modules/global";
-import ThemeDrawer from "./components/ThemeDrawer/index.vue";
+import ThemeDrawer from "@/layouts/ThemeDrawer.vue";
 import LayoutVertical from "./LayoutVertical.vue";
 import LayoutClassic from "./LayoutClassic.vue";
 import LayoutTransverse from "./LayoutTransverse.vue";

@@ -3,7 +3,7 @@ import {computed, defineAsyncComponent, reactive, watch, type Component} from "v
 import {LayoutType} from "@/stores/interface";
 import {useGlobalStore} from "@/stores/modules/global";
 import Loading from "@/components/Loading/index.vue";
-import ThemeDrawer from "./components/ThemeDrawer/index.vue";
+import ThemeDrawer from "@/layouts/ThemeDrawer.vue";
 
 const LayoutComponents: Record<LayoutType, Component> = {
   vertical: defineAsyncComponent(() => import("./LayoutVertical/index.vue")),

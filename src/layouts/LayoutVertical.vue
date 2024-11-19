@@ -38,7 +38,7 @@ import { useGlobalStore } from "@/stores/modules/global";
 import Main from "@/layouts/Main.vue";
 import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
-import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
+import SubMenu from "@/layouts/SubMenu.vue";
 
 const title = import.meta.env.VITE_GLOB_APP_TITLE;
 
